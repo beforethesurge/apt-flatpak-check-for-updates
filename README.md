@@ -1,0 +1,8 @@
+# check_for_updates
+
+Recommend creating a crontab for this script, that way you can ignore this until a certain time
+
+For example (change with wherever you want the script):
+
+- `0 23 * * 0 konsole -e bash $HOME/Documents/scripts/check-for-updates.sh`
+  - This runs every Sunday at 23:00 (11 pm)
