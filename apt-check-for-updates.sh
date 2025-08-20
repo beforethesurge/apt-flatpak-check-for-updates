@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "🔍 Checking for updates..."
-sudo apt update
+apt update
 
 packages_to_update=$(apt list --upgradable 2>/dev/null | grep -v "Listing..." | wc -l)
 if [ "$packages_to_update" -eq 0 ]; then
@@ -9,7 +9,7 @@ if [ "$packages_to_update" -eq 0 ]; then
 else
     echo "📦 $packages_to_update packages can be upgraded"
     echo "🚀 Upgrading packages..."
-    sudo apt upgrade -y
+    apt upgrade -y
 fi
 
 echo "🧹 Checking for packages no longer being used..."
@@ -20,5 +20,5 @@ if [ "$packages_to_remove_check" -eq 0 ]; then
 else
     echo "🗑️ $packages_to_remove_check unused packages found"
     echo "🧼 Removing unused packages..."
-    sudo apt autoremove --purge -y
+    apt autoremove --purge -y
 fi
