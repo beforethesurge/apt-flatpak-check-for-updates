@@ -8,7 +8,7 @@ For example (change with wherever you want the script):
 
 ```sh
 HOME=/home/username
-0 22 * * * $HOME/Documents/scripts/apt-check-for-updates.sh
+0 22 * * * $HOME/Documents/scripts/apt-check-for-updates.sh >> $HOME/Documents/scripts/update.log 2>&1
 ```
 
 - This runs every day at 22:00 (10 pm)
