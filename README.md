@@ -1,4 +1,4 @@
-# Apt Check for Updates
+# Apt/Flatpak Check for Updates
 
 Recommend creating a crontab for this script, that way you can ignore this until a certain time
 
@@ -7,8 +7,8 @@ Recommend creating a crontab for this script, that way you can ignore this until
 For example (change with wherever you want the script):
 
 ```sh
-HOME=/home/username
-0 22 * * * $HOME/Documents/scripts/apt-check-for-updates.sh >> $HOME/Documents/scripts/update.log 2>&1
+HOME=/home/changeme
+0 22 * * * $HOME/path/to/script >> $HOME/path/to/log/update.log 2>&1
 ```
 
 - This runs every day at 22:00 (10 pm)
