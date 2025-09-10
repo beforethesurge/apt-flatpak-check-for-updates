@@ -34,7 +34,7 @@ echo
 if command -v flatpak >/dev/null 2>&1; then
     echo "Flatpak is installed"
     flatpak_check_for_updates=$(flatpak update --noninteractive 2>&1)
-    if echo "$flatpak_check_for_updates" | grep -qE "^Nothing to do"; then
+    if echo "$flatpak_check_for_updates" | grep -q "Nothing to do"; then
         echo "✅ No Flatpak updates found"
     else
         echo "📦 Flatpak updates found. Downloading and installing updates..."
