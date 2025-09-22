@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# New line to separate from other entries in potential log file
+# New line to separate from other entries in potential log files
 echo
 # Outputs date for auditing
 date
@@ -43,3 +43,6 @@ if command -v flatpak >/dev/null 2>&1; then
 else
     echo "❌ Flatpak is not installed; Skipping"
 fi
+
+echo
+echo "----------------------------------"
